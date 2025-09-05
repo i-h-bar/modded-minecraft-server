@@ -12,6 +12,7 @@ services:
       - "25565:25565"
     volumes:
       - ${MINECRAFT_HOST_DIR}:/minecraft/world/
+      - ${MODS_DIR}:/minecraft/mods
     networks:
       - minecraft_network
     stdin_open: true

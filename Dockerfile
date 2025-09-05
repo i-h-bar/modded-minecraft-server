@@ -19,9 +19,6 @@ RUN ./run.sh || true
 RUN echo "eula=true" > eula.txt
 RUN echo "-Xmx$MEMORY_ALLOCATION" > user_jvm_args.txt
 
-COPY mods/ mods/
-RUN rm mods/mods.txt || true
-
 EXPOSE 25565
 
 CMD ["./run.sh", "nogui" ]
